@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: #F4F5F7 !important;
+    color: #1a1a2e !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #F4F5F7;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #8B5CF6;
+    border-radius: 4px;
+  }
+
+  /* All inputs */
+  input,
+  textarea,
+  select {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+  }
+
+  /* Headings */
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: 'Fraunces', serif !important;
+    color: #111827 !important;
+  }
+}
+
+@layer components {
+
+  /* ===== SIDEBAR ===== */
+  /* Dark sidebar → White */
+  .min-h-screen.bg-\[\#1a1d27\].border-r,
+  div[class*="bg-[#1a1d27]"][class*="border-r"] {
+    background-color: #FFFFFF !important;
+    border-color: #E5E7EB !important;
+  }
+
+  /* Sidebar logo area */
+  div[class*="bg-[#1a1d27]"][class*="border-r"] .border-b {
+    border-color: #F3F4F6 !important;
+  }
+
+  /* Tenant info box in sidebar */
+  div[class*="bg-[#0f1117]"][class*="rounded-xl"] {
+    background-color: #F5F3FF !important;
+    border-color: #DDD6FE !important;
+  }
+
+  /* Nav active state */
+  .bg-blue-600 {
+    background-color: #7C3AED !important;
+  }
+
+  .hover\:bg-blue-700:hover {
+    background-color: #6D28D9 !important;
+  }
+
+  /* Nav inactive */
+  button.text-gray-400 {
+    color: #6B7280 !important;
+  }
+
+  /* ===== GLOBAL BACKGROUNDS ===== */
+  .bg-\[\#0f1117\] {
+    background-color: #F4F5F7 !important;
+  }
+
+  .bg-\[\#1a1d27\] {
+    background-color: #FFFFFF !important;
+  }
+
+  .bg-\[\#1e2130\] {
+    background-color: #FFFFFF !important;
+  }
+
+  .bg-\[\#2a2d3a\] {
+    background-color: #E5E7EB !important;
+  }
+
+  /* ===== BORDERS ===== */
+  .border-\[\#2a2d3a\] {
+    border-color: #E5E7EB !important;
+  }
+
+  .border-\[\#2a2d3a\]\/20 {
+    border-color: #E5E7EB !important;
+  }
+
+  /* ===== TEXT COLORS ===== */
+  .text-\[\#e8e8e8\],
+  .text-\[\#c0c5d0\],
+  .text-white {
+    color: #111827 !important;
+  }
+
+  .text-\[\#8a8f9e\],
+  .text-\[\#4a4f60\],
+  .text-gray-500,
+  .text-gray-400 {
+    color: #6B7280 !important;
+  }
+
+  .text-gray-200 {
+    color: #374151 !important;
+  }
+
+  .text-gray-600 {
+    color: #4B5563 !important;
+  }
+
+  /* ===== CARDS ===== */
+  .rounded-2xl.bg-\[\#1a1d27\],
+  .rounded-2xl.bg-\[\#1e2130\] {
+    background-color: #FFFFFF !important;
+    border-color: #E5E7EB !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06) !important;
+  }
+
+  /* ===== INPUTS ===== */
+  input[class*="bg-[#0f1117]"],
+  input[class*="bg-[#1a1d27]"],
+  textarea[class*="bg-[#0f1117]"],
+  select[class*="bg-[#0f1117]"] {
+    background-color: #F9FAFB !important;
+    border-color: #E5E7EB !important;
+    color: #111827 !important;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #D1D5DB !important;
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    border-color: #8B5CF6 !important;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1) !important;
+    outline: none !important;
+  }
+
+  /* ===== BUTTONS ===== */
+  /* Primary blue → Purple */
+  .bg-blue-600 {
+    background-color: #7C3AED !important;
+    color: #FFFFFF !important;
+  }
+
+  .bg-blue-600:hover,
+  .hover\:bg-blue-700:hover {
+    background-color: #6D28D9 !important;
+  }
+
+  /* ===== CHAT MESSAGES ===== */
+  /* AI message bubble */
+  div[class*="bg-[#1e2130]"][class*="border"][class*="rounded-2xl"] {
+    background-color: #FFFFFF !important;
+    border-color: #E5E7EB !important;
+    color: #374151 !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) !important;
+  }
+
+  /* User message bubble */
+  div[class*="bg-blue-600"][class*="rounded-2xl"] {
+    background-color: #7C3AED !important;
+    color: #FFFFFF !important;
+  }
+
+  /* Chat input area */
+  div[class*="border-t"][class*="bg-[#1a1d27]"] {
+    background-color: #FFFFFF !important;
+    border-color: #E5E7EB !important;
+  }
+
+  /* Quick action buttons */
+  button[class*="border-[#2a2d3a]"][class*="bg-[#1a1d27]"] {
+    background-color: #FFFFFF !important;
+    border-color: #E5E7EB !important;
+    color: #6B7280 !important;
+  }
+
+  button[class*="border-[#2a2d3a]"][class*="bg-[#1a1d27]"]:hover {
+    border-color: #8B5CF6 !important;
+    color: #7C3AED !important;
+    background-color: #F5F3FF !important;
+  }
+
+  /* ===== HEADER ===== */
+  div[class*="border-b"][class*="bg-[#1a1d27]"] {
+    background-color: #FFFFFF !important;
+    border-color: #E5E7EB !important;
+  }
+
+  /* ===== AI BOT ICON ===== */
+  div[class*="from-blue-500"][class*="to-cyan-400"] {
+    background: #7C3AED !important;
+    background-image: none !important;
+  }
+
+  /* ===== MODALS ===== */
+  div[class*="bg-[#1a1d27]"][class*="border"][class*="rounded-2xl"][class*="p-6"] {
+    background-color: #FFFFFF !important;
+    border-color: #E5E7EB !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12) !important;
+  }
+
+  /* ===== TABS ===== */
+  div[class*="bg-[#1a1d27]"][class*="border-b"] {
+    background-color: #FFFFFF !important;
+    border-color: #E5E7EB !important;
+  }
+
+  /* Tab active */
+  button[class*="bg-[#3a7bd5]"],
+  button.active[class*="bg-blue"] {
+    background-color: #7C3AED !important;
+    color: #FFFFFF !important;
+  }
+
+  /* ===== STATUS BADGES ===== */
+  /* Green paid */
+  .text-\[\#00e676\] {
+    color: #059669 !important;
+  }
+
+  .bg-\[\#1a3a1a\] {
+    background-color: #ECFDF5 !important;
+  }
+
+  /* Red due */
+  .text-\[\#ff6b6b\] {
+    color: #DC2626 !important;
+  }
+
+  .bg-\[\#3a1a1a\] {
+    background-color: #FEF2F2 !important;
+  }
+
+  /* Yellow warning */
+  .text-\[\#ffaa00\] {
+    color: #D97706 !important;
+  }
+
+  .bg-\[\#3a2a1a\] {
+    background-color: #FFFBEB !important;
+  }
+
+  /* Blue info */
+  .text-\[\#3a7bd5\] {
+    color: #7C3AED !important;
+  }
+
+  .bg-\[\#1a2a3a\] {
+    background-color: #F5F3FF !important;
+  }
+
+  /* ===== GRADIENT LOGO ===== */
+  div[class*="from-blue-500"],
+  div[class*="from-purple-500"] {
+    background: #7C3AED !important;
+    background-image: none !important;
+  }
+
+  /* ===== ADMIN PANEL ===== */
+  /* Admin sidebar */
+  div[class*="bg-[#1a1d27]"][class*="border-r"][class*="flex"][class*="flex-col"] {
+    background-color: #FFFFFF !important;
+    border-color: #E5E7EB !important;
+  }
+
+  /* Admin active nav */
+  .bg-purple-600 {
+    background-color: #7C3AED !important;
+  }
+
+  .hover\:bg-purple-700:hover {
+    background-color: #6D28D9 !important;
+  }
+
+  /* Admin content area */
+  .min-h-screen.bg-\[\#0f1117\].flex {
+    background-color: #F4F5F7 !important;
+  }
+
+  /* ===== MAIN PAGE BG ===== */
+  .min-h-screen {
+    background-color: #F4F5F7 !important;
+  }
+
+  /* ===== LOADING SPINNER ===== */
+  .text-blue-400 {
+    color: #8B5CF6 !important;
+  }
+
+  .border-blue-500 {
+    border-color: #8B5CF6 !important;
+  }
+
+  /* ===== BOUNCE DOTS (chat loading) ===== */
+  .bg-blue-500 {
+    background-color: #8B5CF6 !important;
+  }
+
+  /* ===== MAINTENANCE BUTTON ===== */
+  button[class*="bg-blue-600"][class*="rounded-xl"] {
+    background-color: #7C3AED !important;
+  }
+
+  /* ===== FONT DISPLAY CLASS ===== */
+  .font-display {
+    font-family: 'Fraunces', serif !important;
+  }
+
+  /* ===== PAYMENTS PAGE SPECIFIC ===== */
+  .bg-red-500\/5 {
+    background-color: #FEF2F2 !important;
+  }
+
+  .bg-green-500\/5 {
+    background-color: #ECFDF5 !important;
+  }
+
+  .border-red-500\/20 {
+    border-color: #FECACA !important;
+  }
+
+  .border-green-500\/20 {
+    border-color: #A7F3D0 !important;
+  }
+
+  /* Green text */
+  .text-green-400 {
+    color: #059669 !important;
+  }
+
+  .text-red-400 {
+    color: #DC2626 !important;
+  }
+
+  .text-yellow-400 {
+    color: #D97706 !important;
+  }
+
+  /* Pay Now button */
+  .bg-green-600 {
+    background-color: #059669 !important;
+  }
+
+  .hover\:bg-green-700:hover {
+    background-color: #047857 !important;
+  }
+
+  /* ===== MAINTENANCE PAGE ===== */
+  .bg-yellow-500\/5 {
+    background-color: #FFFBEB !important;
+  }
+
+  .border-yellow-500\/20 {
+    border-color: #FDE68A !important;
+  }
+
+  .text-yellow-400 {
+    color: #D97706 !important;
+  }
+
+  /* ===== DOCUMENT PAGE ===== */
+  .bg-red-500\/10 {
+    background-color: #FEE2E2 !important;
+  }
+
+  .border-red-500\/20 {
+    border-color: #FECACA !important;
+  }
+
+  .bg-blue-500\/10 {
+    background-color: #EDE9FE !important;
+  }
+
+  .border-blue-500\/20 {
+    border-color: #DDD6FE !important;
+  }
+
+}

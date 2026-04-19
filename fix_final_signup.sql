@@ -1,1 +1,0 @@
-ALTER TABLE public.tenants DROP CONSTRAINT IF EXISTS tenants_owner_id_fkey;
